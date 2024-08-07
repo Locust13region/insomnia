@@ -1,0 +1,59 @@
+#root {
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 40px;
+}
+.btn {
+	width: 200px;
+	height: 50px;
+	padding: 4px;
+}
+.addReport {
+}
+.clear {
+}
+.list {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px 20px;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	background-color: #1a1a1a;
+	gap: 15px;
+	text-align: left;
+}
+.item__id {
+	flex-basis: 40px;
+}
+.item__status {
+	flex-basis: 100px;
+	flex-grow: 2;
+}
+.item__image {
+	margin-left: auto;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.reportImage {
+	width: 100%;
+	height: 100%;
+}
