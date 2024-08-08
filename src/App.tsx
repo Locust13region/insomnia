@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { getReportDone, getReportStatus, postReport } from "./services";
 import { ClockLoader } from "react-spinners";
