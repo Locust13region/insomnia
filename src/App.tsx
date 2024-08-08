@@ -19,7 +19,7 @@ function App() {
 
 	const handleClear = () => setReports([]);
 
-	const interval = useRef<NodeJS.Timeout | null>(null);
+	// const interval = useRef<NodeJS.Timeout | null>(null);
 
 	function requestStatus(reports: Report[]) {
 		console.log("requestStatus");
@@ -49,16 +49,17 @@ function App() {
 	}
 
 	useEffect(() => {
+		let interval: string | number | NodeJS.Timeout | undefined;
 		if (reports.every((report) => report.isComplete)) {
-			if (interval.current) {
-				clearInterval(interval.current);
+			if (interval) {
+				clearInterval(interval);
 			}
 		} else {
-			interval.current = setInterval(() => {
+			interval = setInterval(() => {
 				requestStatus(reports);
-			}, 5000);
+			}, 1000);
 		}
-		return () => clearInterval(interval.current);
+		return () => clearInterval(interval);
 	}, [reports]);
 
 	return (
